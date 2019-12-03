@@ -6,7 +6,7 @@ const authRoutes = require('./routes/auth');
 const stockRoutes = require('./routes/stock');
 const userStockRoutes =  require('./routes/userstock');
 
-const MONGODB_URI = "http://localhost:27017/stocks_db";
+const MONGODB_URI = "mongodb://localhost:27017/incedo_db";
 
 const app = express();
 
