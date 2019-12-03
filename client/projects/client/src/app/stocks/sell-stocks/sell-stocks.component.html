@@ -1,0 +1,36 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12"><button type="button" class="btn btn-primary float-right pr-5 pl-5"
+        [routerLink]="['/stocks/grid']">Done</button></div>
+  </div>
+  <div class="row">
+    <div class="card-deck">
+
+      <div class="card" *ngFor="let stock of stocks; index as i;">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3>{{ stock.title }}</h3>
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <p class="well lead font-weight-bold">${{stock.price}}</p>
+          </div>
+          <div class="form-group">
+            <label for="price">Total Quantity</label>
+            <p class="well lead font-weight-bold">{{stock.quantity}}</p>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity to sell</label>
+            <input type="number" #qty class="form-control" id="qty" aria-describedby="quantity">
+            <!-- <small class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div class="text-center">
+            <button type="button" (click)="sellStock(stock, qty.value)" class="btn btn-success form-control">Sell</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

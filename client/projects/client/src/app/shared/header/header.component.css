@@ -1,0 +1,33 @@
+
+.nav {
+    height: 60px;
+    width: 100%;
+    left: 0;
+    top: 0p;
+    box-shadow: 0px 2px 2px 1px #2d9d79;
+}
+
+.header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #0bd893;
+    width: 100%;
+}
+
+h3 {
+    color: red;
+}
+button {
+    color: red;
+}
+button:hover {
+    color: yellow;
+}
+.active {
+    color: yellow;
+}
+
+.hide {
+    display: none;
+}

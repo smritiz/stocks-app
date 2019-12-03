@@ -1,0 +1,10 @@
+<div class="nav" [ngClass]="{ 'hide': hide }">
+    <div class="header">
+        <div class="d-flex justify-content-center align-items-center">
+          <h3 class="brand">Stocks App</h3>
+          <button class="btn btn-transparent ml-4" routerLink="/stocks/grid" routerLinkActive="active"><strong>All Stocks</strong></button>
+          <button class="btn btn-transparent ml-4" routerLink="/stocks/my-stocks" routerLinkActive="active"><strong>My Stocks</strong></button>
+        </div>
+        <button class="btn btn-transparent" (click)="logout()"><strong>Logout</strong></button>
+      </div>
+</div>
