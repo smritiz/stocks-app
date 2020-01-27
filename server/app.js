@@ -35,13 +35,16 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message, data: data });
 });
 
+app.listen(3000, ()=>{
+    console.log("port listening at 3000");
+});
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(result => {
-        const server = app.listen(8080);
-        const io = require('./config/socket').init(server);
-        io.on('connection', socket => {
-            console.log('Client connected');
-        });
-    })
-    .catch(err => console.log(err));
+// mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(result => {
+//         const server = app.listen(8080);
+//         const io = require('./config/socket').init(server);
+//         io.on('connection', socket => {
+//             console.log('Client connected');
+//         });
+//     })
+//     .catch(err => console.log(err));
