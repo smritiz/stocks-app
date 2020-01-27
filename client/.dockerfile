@@ -4,7 +4,8 @@ FROM node:10.16.3
 # set working directory
 WORKDIR /app
 
-COPY package.json /app/package.json
+COPY . .
+
 RUN npm install
 RUN npm install -g @angular/cli@7.2.0
 
@@ -13,4 +14,4 @@ RUN npm install -g @angular/cli@7.2.0
 COPY . /app
 
 # start app
-CMD ng serve 
+CMD ng serve
